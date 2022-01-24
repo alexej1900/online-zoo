@@ -1,2 +1,2 @@
 # online-zoo
-https://alexej1900.github.io/online-zoo/pages/landing/index.html
+https://alexej1900.github.io/online-zoo/online-zoo/pages/landing
