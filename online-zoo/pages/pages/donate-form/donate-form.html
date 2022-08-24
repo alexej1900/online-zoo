@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Donate-form</title>
+</head>
+<body>
+	<div class="form">
+		<div class="form__block">
+			<!-- Первая секция -->
+			<section class="section">
+				<h3>Donation Information</h3>
+				<div class="form__line form__line_amount">
+					<div class="form__labels">
+						<label for="form__amount">Amount:</label>
+					</div>
+					<form class="form__inputs form__inputs_amount">
+						<input id="form__amount" type="number" placeholder="1000" pattern="[0-9]{,4}" max="5000" class="input__number input__amount">
+						<p class="input__dollar">$</p>
+					</form>
+				</div>
+			</section>
+			<!-- Вторая секция -->
+			<section class="section section__addition">
+				<h3>Additional information</h3>
+				<div class="form__line">
+					<div class="form__labels form__labels_hidden">
+						<label for="form__social"></label>
+					</div>
+					<div class="form__inputs ">
+						<input id="form__social" type="checkbox" class="input__check">
+						<p class="input-p">Share with your friends on social networks </p>
+					</div>
+				</div>
+				<div class="form__line">
+					<div class="form__labels form__labels_hidden">
+					</div>
+					<div class="form__inputs">
+						<a href="https://www.facebook.com/">
+							<img src="../../assets/images/facebook-donate-logo.png" alt="facebook-logo">
+						</a>
+						<a href="https://www.instagram.com">
+							<img src="../../assets/images/Instagram-donate-logo.png" alt="Instagram-logo">
+						</a>
+						<a href="https://twitter.com/">
+							<img src="../../assets/images/Twitter-donate-logo.png" alt="Twitter-logo">
+						</a>
+					</div>
+				</div>
+				<div class="form__line form__line_corporate">
+					<div class="form__labels form__labels_hidden">
+						<label for="form__corporate">Corporate:</label>
+					</div>
+					<div class="form__inputs">
+						<input id="form__corporate" type="checkbox" class="input__check">
+						<p class="input-p">This donation is on behalf of a company</p>
+					</div>
+				</div>
+				<div class="form__line">
+					<div class="form__labels form__labels_hidden">
+						<label for="form__anonym">Anonymous:</label>
+					</div>
+					<div class="form__inputs">
+						<input id="form__anonym" type="checkbox" class="input__check">
+						<p class="input-p">I prefer to make this donation anonymously</p>
+					</div>
+				</div>
+				<div class="form__line form__line_comments">
+					<div class="form__labels">
+						<label for="form__comments">Comments:</label>
+					</div>
+					<div class="form__inputs">
+						<input id="form__comment" type="text" class="input__text input__comments">
+					</div>
+				</div>
+			</section>
+			<!-- Третья секция -->
+			<section class="section">
+				<h3>Payment information</h3>
+				<div class="form__line center-line">
+					<div class="form__labels">
+						<label for="form__name" class="star star-small">Cardholder's Name:</label>
+					</div>
+					<div class="form__inputs">
+						<input id="form__name" type="text" class="input__text input__name ">
+					</div>
+				</div>
+				<div class="form__line center-line">
+					<div class="form__labels">
+						<label for="form__type" class="star star-small">Card Type:</label>
+					</div>
+					<div class="form__inputs form__inputs_card-type">
+						<input id="form__type" type="text" class="input__text input__type">
+						<img src="../../assets/images/paypal-logo.png" alt="paypal-logo">
+					</div>
+				</div>
+				<div class="form__line center-line">
+					<div class="form__labels">
+						<label for="form__number" class="star star-small">Credit Card Number:</label>
+					</div>
+					<div class="form__inputs">
+						<input id="form__number" type="text" class="input__text input__num">
+					</div>
+				</div>
+				<div class="form__line center-line">
+					<div class="form__labels">
+						<label for="form__expirat" class="star">Card Expiration:</label>
+					</div>
+					<div class="form__inputs">
+						<!-- <label for="form__expirat1" class="star-small"></label> -->
+						<select name="month" id="form__expirat1" class="input__text input__month">
+							<option value=""></option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+						</select>
+						<!-- <label for="form__expirat2" class="star-small"></label> -->
+						<select name="month" id="form__expirat1" class="input__text input__year">
+							<option value=""></option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+							<option value="24">24</option>
+							<option value="25">25</option>
+							<option value="26">26</option>
+							<option value="27">27</option>
+						</select>
+					</div>
+				</div>
+				<div class="form__line center-line">
+					<div class="form__labels">
+						<label for="form__code" class="star">Card Security Code:</label>
+					</div>
+					<form class="form__inputs form__inputs_code star-small">
+						<input id="form__code" type="number" placeholder="0000" pattern="[0-9]{,4}" max="9999" class="input__number input__code">
+					</form>
+				</div>
+				<div class="form__line center-line">
+					<div class="form__labels">
+						<label for="form__amount">Amount:</label>
+					</div>
+					<form class="form__inputs form__inputs_amount">
+						<input id="form__amount" type="number" placeholder="1000" pattern="[0-9]{,4}" max="5000" class="input__number input__amount">
+						<p class="input__dollar">$</p>
+					</form>
+				</div>
+			</section>
+			<div class="form__line form__line_btn">
+				<div class="form__labels">
+				</div>
+				<div class="form__inputs">
+					<a href="#" class="btn btn-oval btn__donate">donate now</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
