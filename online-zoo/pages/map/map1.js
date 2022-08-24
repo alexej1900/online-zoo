@@ -13,7 +13,7 @@ let leftIndent = 0;
 
 const calculateCoords = (e, elem) => {
   var box = elem.getBoundingClientRect();
-  topIndent = e.pageY - (box.top + pageYOffset) + 80;
+  topIndent = e.pageY - (box.top + pageYOffset) + 80 - pageYOffset;
   leftIndent = e.pageX - (box.left + pageXOffset);
 }
 
@@ -43,7 +43,7 @@ map.addEventListener('mousedown', (e) => {
   moveAt(e);
 
   document.addEventListener('mousemove', moveAt);
-  map.addEventListener('mouseup', stopDrag);
+  document.addEventListener('mouseup', stopDrag);
 });
 
 map.ondragstart = function() {
@@ -53,8 +53,22 @@ map.ondragstart = function() {
 header.addEventListener('mouseenter', stopDrag);
 footer.addEventListener('mouseenter', stopDrag);
 
+// Открытие и закрытие тултипа
+function openTooltip(e) {
+  points.forEach(point => point.parentNode.children[1].classList.remove('tooltip__active'));
+  e.target.parentNode.children[1].classList.toggle('tooltip__active');
+}
+function closeTooltip(e) {
+  if (!e.target.classList.contains('point'))
+  points.forEach(point => point.parentNode.children[1].classList.remove('tooltip__active'));
+}
+
+points.forEach(point => point.addEventListener('click', openTooltip));
+document.addEventListener('click', closeTooltip);
+
+// Увеличение и уменьшение
 zoomInButton.addEventListener('click', () => {
-  if (mapImage.width <= wrapper.offsetWidth * 2) {
+  if (mapImage.width <= wrapper.offsetWidth * 2.5) {
 
     const leftPos = map.offsetLeft || 0;
     
@@ -122,15 +136,15 @@ zoomOutButton.addEventListener('click', () => {
     map.style.top = `${topPos - ((nextHeight - prevHeight) / 2)}px`;
 
     if (map.width <= wrapper.offsetWidth && map.height <= wrapper.offsetHeight) {
-      mapImage.style.width = `${wrapper.offsetWidth}px`;
-      mapImage.style.height = "auto";
-      mapImage.style.top = `${(wrapper.offsetHeight - mapImage.height) / 2}px`;
-      mapImage.style.left = '0px';
-      if (mapImage.height >= wrapper.offsetHeight) {
-        mapImage.style.height = `${wrapper.offsetHeight}px`;
-        mapImage.style.width = 'auto';
-        mapImage.style.top = '0px';
-        mapImage.style.left = `${(wrapper.offsetWidth - mapImage.width) / 2}px`;
+      map.style.width = `${wrapper.offsetWidth}px`;
+      map.style.height = "auto";
+      map.style.top = `${(wrapper.offsetHeight - map.height) / 2}px`;
+      map.style.left = '0px';
+      if (map.height >= wrapper.offsetHeight) {
+        map.style.height = `${wrapper.offsetHeight}px`;
+        map.style.width = 'auto';
+        map.style.top = '0px';
+        map.style.left = `${(wrapper.offsetWidth - map.width) / 2}px`;
       }
     }
   }
