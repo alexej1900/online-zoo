@@ -10,9 +10,9 @@ window.addEventListener('resize', (e) => {
 });
 
 function slideMove() {
-	if (window.width >= 940) {
+	// if (window.width >= 940) {
 		carousel.scrollTo((imgWidth + gap) * input.value, 0);
-	}
+	// }
 	
 }
 
@@ -37,7 +37,7 @@ const delayAutoSliding = () => {
   autoSlideTimeout = setTimeout(() => {
     clearInterval(autoSlideInterval);
     autoSlideInterval = setInterval(slideFunc, 10000);
-  }, 40000);
+  }, 30000);
 }
 
 carousel.addEventListener('click', delayAutoSliding);

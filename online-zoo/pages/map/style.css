@@ -363,8 +363,8 @@ main {
   position: relative;
   height: 720px;
   width: 100%;
-  display: flex;
   background: #EAF7FE;
+  display: flex;
 }
 
 @media (max-width: 639px) {
@@ -404,15 +404,12 @@ main {
   position: relative;
   width: 1083px;
   height: 100%;
-  /*margin-top: 104px;*/
-
+  margin: 0 auto;
 }
 
 @media (max-width: 1599px) {
   .map-block {
     margin-left: 0;
-    /*margin-top: -16px;*/
-    /*margin-bottom: 34px;*/
   }
 }
 
@@ -421,7 +418,6 @@ main {
     width: 800px;
     height: auto;
     margin-top: 60px;
-    /*margin-bottom: 18px;*/
   }
 }
 
@@ -430,11 +426,6 @@ main {
     width: 110%;
     margin: 0 auto;
   }
-}
-
-.marker:hover {
-  cursor: pointer;
-  fill: #F9804B;
 }
 
 .map__icon {
@@ -449,22 +440,6 @@ main {
   top: calc(50% - 0%);
   left: calc(50% - 42%);
 }
-
-/*.map__icon_eagle-1:hover .marker__los-ang {
-  fill: #F9804B;
-}*/
-
-/*@media (max-width: 1599px) {
-  .map__icon_eagle-1 {
-    left: 12%;
-  }
-}*/
-
-/*@media (max-width: 1139px) {
-  .map__icon_eagle-1 {
-    left: 12%;
-  }
-}*/
 
 @media (max-width: 999px) {
   .map__icon_eagle-1 {
@@ -485,18 +460,6 @@ main {
   left: calc(50% - 39%);
 }
 
-/*@media (max-width: 1599px) {
-  .map__icon_eagle-2 {
-    left: 15%;
-  }
-}*/
-
-/*@media (max-width: 1139px) {
-  .map__icon_eagle-2 {
-    left: 15%;
-  }
-}*/
-
 @media (max-width: 999px) {
   .map__icon_eagle-2 {
     width: 27px;
@@ -515,18 +478,6 @@ main {
   top: calc(50% + 8%);
   left: calc(50% - 25%);
 }
-
-/*@media (max-width: 1599px) {
-  .map__icon_crocodale {
-    left: 27%;
-  }
-}*/
-
-/*@media (max-width: 1139px) {
-  .map__icon_crocodale {
-    left: 27%;
-  }
-}*/
 
 @media (max-width: 999px) {
   .map__icon_crocodale {
@@ -547,18 +498,6 @@ main {
   left: calc(50% - 0%);
 }
 
-/*@media (max-width: 1599px) {
-  .map__icon_gorillas {
-    left: 55%;
-  }
-}*/
-
-/*@media (max-width: 1139px) {
-  .map__icon_gorillas {
-    left: 55%;
-  }
-}*/
-
 @media (max-width: 999px) {
   .map__icon_gorillas {
     width: 27px;
@@ -576,20 +515,6 @@ main {
   top: calc(50% - 6%);
   left: calc(50% + 24%);
 }
-
-/*@media (max-width: 1599px) {
-  .map__icon_panda-1 {
-    left: 80%;
-    top: 48%;
-  }
-}*/
-
-/*@media (max-width: 1139px) {
-  .map__icon_panda-1 {
-    top: 46%;
-    left: 80%;
-  }
-}*/
 
 @media (max-width: 999px) {
   .map__icon_panda-1 {
@@ -618,16 +543,6 @@ main {
   top: calc(50% + 4%);
   left: calc(50% + 22%);
 }
-
-.map__icon_panda-2:hover .marker__china-2 {
-  fill: #F9804B;
-}
-
-/*@media (max-width: 1599px) {
-  .map__icon_panda-2 {
-    left: 80%;
-  }
-}*/
 
 @media (max-width: 999px) {
   .map__icon_panda-2 {
@@ -660,7 +575,7 @@ main {
   bottom: 20px;
   position: sticky;
   top: calc(100vh - 150px);
-  z-index: 10;
+  z-index: 100;
 }
 
 @media (max-width: 1599px) {
@@ -682,7 +597,7 @@ main {
   background: #fff;
   border-radius: 5px;
   transition: .2s;
-  z-index: 10;
+  z-index: 100;
 }
 
 .plus-icon,
@@ -726,26 +641,6 @@ main {
   left: calc(50% - 38%);
 }
 
-/*@media (max-width: 1599px) {
-  .tooltip__block_eagle {
-
-    left: calc(8% - 160px/2 + 20px);
-  }
-}*/
-
-/*@media (max-width: 1001px) {
-  .tooltip__block_eagle {
-    left: calc(8% - 160px/2 + 20px);
-  }
-}*/
-
-/*@media (max-width: 999px) {
-  .tooltip__block_eagle {
-    top: 52%;
-    left: calc(5% - 160px/2);
-  }
-}
-*/
 @media (max-width: 830px) {
   .tooltip__block_eagle {
     left: calc(3% - 160px/2);
@@ -776,20 +671,6 @@ main {
   top: calc(50% + 5%);
   left: calc(50% - 28%);
 }
-
-/*@media (max-width: 1599px) {
-  .tooltip__block_crocodale {
-    top: 54%;
-    left: calc(32% - 160px/2 + 20px);
-  }
-}*/
-
-/*@media (max-width: 1139px) {
-  .tooltip__block_crocodale {
-    top: 53%;
-    left: calc(34% - 160px/2 + 20px);
-  }
-}*/
 
 @media (max-width: 999px) {
   .tooltip__block_crocodale {
@@ -842,20 +723,6 @@ main {
   top: calc(50% + 16%);
   left: calc(50% - 0%);
 }
-
-/*@media (max-width: 1599px) {
-  .tooltip__block_gorillas {
-    top: 66%;
-    left: 54%;
-  }
-}*/
-
-/*@media (max-width: 1139px) {
-  .tooltip__block_gorillas {
-    top: 65%;
-    left: 55%;
-  }
-}*/
 
 @media (max-width: 999px) {
   .tooltip__block_gorillas {
@@ -918,20 +785,6 @@ main {
   top: calc(50% - 4%);
   left: calc(50% + 28%);
 }
-
-/*@media (max-width: 1599px) {
-  .tooltip__block_panda {
-    left: 83%;
-    top: 36%;
-  }
-}*/
-
-/*@media (max-width: 1139px) {
-  .tooltip__block_panda {
-    left: 84%;
-    top: 34%;
-  }
-}*/
 
 @media (max-width: 999px) {
   .tooltip__block_panda {
@@ -1007,20 +860,6 @@ main {
   top: calc(50% + 4%);
   left: calc(50% + 28%);
 }
-
-/*@media (max-width: 1599px) {
-  .tooltip__block_panda2 {
-    top: 55%;
-    left: 83%;
-  }
-}
-*/
-/*@media (max-width: 1139px) {
-  .tooltip__block_panda2 {
-    top: 53%;
-    left: 83%;
-  }
-}*/
 
 @media (max-width: 999px) {
   .tooltip__block_panda2 {
@@ -1206,42 +1045,30 @@ main {
   }
 }
 
-.tooltip__block_eagle:hover .tooltip__eagle,
-.tooltip__block_crocodale:hover .tooltip__crocodale,
-.tooltip__block_gorillas:hover .tooltip__gorillas,
-.tooltip__block_panda2:hover .tooltip__panda2 {
-  z-index: 1;
+.tooltip__block_eagle .tooltip__active,
+.tooltip__block_crocodale .tooltip__active,
+.tooltip__block_gorillas .tooltip__active,
+.tooltip__block_panda2 .tooltip__active {
+  z-index: 5;
   transform: translateY(0);
   opacity: 1;
 }
 
-.tooltip__block_panda:hover .tooltip__panda {
+.tooltip__block_panda .tooltip__active {
   z-index: 1;
   transform: translateX(0);
   opacity: 1;
 }
 
 @media (max-width: 999px) {
-  .tooltip__block_panda:hover .tooltip__panda {
+  .tooltip__block_panda .tooltip__active {
     transform: translateY(0%);
   }
 }
 
 @media (max-width: 440px) {
-  .tooltip__block_panda:hover .tooltip__panda {
+  .tooltip__block_panda .tooltip__active {
     transform: translateX(0%);
-  }
-}
-
-.tooltip__block_gorillas:hover .tooltip__gorillas {
-  z-index: 1;
-  transform: translateX(0);
-  opacity: 1;
-}
-
-@media (max-width: 639px) {
-  .tooltip__block_gorillas:hover .tooltip__gorillas {
-    transform: translateY(0%);
   }
 }
 
@@ -1250,6 +1077,7 @@ main {
 .tooltip__gorillas,
 .tooltip__panda,
 .tooltip__panda2 {
+  z-index: -5;
   opacity: 0;
   transition: 1s;
 }
@@ -1261,6 +1089,7 @@ main {
   background-image: url(../../assets/icons/marker.svg);
   background-size: contain;
   background-repeat: no-repeat;
+  z-index: 100;
 }
 
 @media (max-width: 1599px) {
@@ -1288,7 +1117,6 @@ main {
 .point__panda {
   margin-bottom: 0;
   margin-right: 20px;
-  /*margin-top: 40%;*/
 }
 
 @media (max-width: 999px) {
@@ -1305,11 +1133,12 @@ main {
   }
 }
 
-.tooltip__block_eagle:hover .point__eagle,
-.tooltip__block_crocodale:hover .point__crocodale,
-.tooltip__block_gorillas:hover .point__gorillas,
-.tooltip__block_panda:hover .point__panda,
-.tooltip__block_panda2:hover .point__panda2 {
+.point__eagle:hover,
+.point__crocodale:hover,
+.point__gorillas:hover,
+.point__panda:hover,
+.point__panda2:hover {
+  cursor: pointer;
   background-image: url(../../assets/icons/marker-orange.svg);
 }
 
